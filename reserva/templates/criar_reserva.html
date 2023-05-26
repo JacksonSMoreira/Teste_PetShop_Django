@@ -1,0 +1,18 @@
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+<main>
+    {% block principal %}
+    <h1> Faça a reserva do seu Pet</h1>
+    <a href="{% url 'reserva:criar_reserva' %}" class="btn btn-primary">Fazer Reserva</a>
+</main>
+{% if sucesso %}
+<p class="alert alert-sucess">Reserva realizada com sucesso, em breve iremos entrar em contato!</p>
+{% else %}
+<form action="" method="post">
+    {% csrf_token %}
+    
+    <hr>
+    <button type="submit" class="btn btn-primary">Realizar Reserva</button>
+</form>
+{% endif %}
+{% endblock %}
