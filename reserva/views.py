@@ -6,10 +6,10 @@ def criar_reserva(request):
     form = ReservaForm(request.POST or None)
     sucesso = False
     if form.is_valid():
-            form.save()
-            sucesso = True        
+        form.save()
+        sucesso = True        
     contexto = {
-        'from': form,
+        'form': form,
         'sucesso': sucesso,
     }
     return render(request, 'criar_reserva.html', contexto)

@@ -13,7 +13,7 @@ class Reserva(models.Model):
     nome = models.CharField(verbose_name='Nome', max_length=50)
     email = models.EmailField(verbose_name='E-mail', max_length=75)
     nome_pet = models.CharField(verbose_name='Nome do pet', max_length=50)
-    data = models.DateField(verbose_name='Data', help_text='dd/mm/aaaa')
+    data = models.DateField(verbose_name='Data', help_text='mm/dd/aaaa')
     turno = models.CharField(verbose_name='Turno', max_length=10, choices=TURNO_OPCOES)
     tamanho = models.IntegerField(verbose_name='Tamanho', choices=TAMANHO_OPCOES)
     observacoes = models.TextField(verbose_name='Observações', blank=True)

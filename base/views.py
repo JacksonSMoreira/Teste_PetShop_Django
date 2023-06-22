@@ -13,7 +13,7 @@ def contato(request):
         sucesso = True
         form.save()
     contexto = {
-        'telefone': '(99) 99999.9999',
+        'telefone': '(351) 914.505.598',
         'responsavel': 'Jackson Moreira',
         'form': form,
         'sucesso': sucesso
